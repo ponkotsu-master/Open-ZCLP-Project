@@ -182,3 +182,180 @@ Route-B（DESI w0+wa）：Euclidで検出可能な+1.4%予測。公開可能。
 振動型の問題はA(z)=A₀/η(z)で解決できる可能性がある。
 マスターの直感（DM支配でAが抑制）は物理的に筋が通ってる。
 次セッションの最優先はA(z)導出。
+
+2026-04-16 Session Record
+Author: Cloak
+What was done
+1. Observer-Scaling Branch Review (番外編レビュー)
+Reviewed the Observer-Scaling Branch developed in a previous session.
+Candidates worth pulling into the main line:
+η = ρ_DM/ρ_DE introduction (directly connects to Hypothesis C)
+dt_obs ∝ d ln S_obs (alternative route for w(z) derivation)
+ε = 8πGρ_DE (candidate for physicalizing the arbitrary parameter)
+Reservations:
+Derivation of Φ_eff'' for ε = 8πGρ_DE incomplete when w ≠ -1
+ρ_threshold = 0 is "most natural" but not uniquely determined
+w(S_obs) conversion is a change of variables, not a derivation
+2. Phase A — Pantheon+ S_obs Verification
+Data: Pantheon+ 1404 samples (z = 0.01–2.26)
+S_obs = 1/(1+z) monotonically decreasing: OK
+ln(1+z) continuity: OK
+Judgment: S_obs usable as observer time parameter
+3. Phase B — Ω Scan
+Ω = π/2, 2π/3, π: oscillation not visible in Pantheon+ z-range (ln(1+z) max ≈ 1.19)
+Root cause: 1 full cycle of Ω = π/2 requires z ≈ 53 — outside observable range
+4. Phase B2 — DESI DR1 Ω Fit
+Data: DESI DR1 7 points
+Best fit Ω = 0.100 (stuck at lower bound)
+ZCLP prediction Ω = π/2 = 1.571
+Gap = 1.47 rad
+Judgment: Current DESI data does not support ZCLP oscillation model. However, 7 data points with 4 degrees of freedom is not decisive falsification.
+5. "4" Physical Basis Confirmed (Cloak approved)
+Poisson equation: ∇²Φ = 4πG(ρ_DM - 2ρ_DE)
+"2" comes from p = -ρ (DE equation of state)
+"4" is a GR necessity, not an arbitrary constant
+Generalization: η ≥ 1 - 3w
+6. Route-B f(z) Derivation (Cloak approved)
+Based on DESI w0+wa model (w0=-0.76, wa=-0.75):
+z
+f(z) deviation from ΛCDM
+1.45
++1.34%
+2.00
++1.42%
+3.00
++1.01%
+f < 1 across all z. Physical consistency confirmed.
+Presentable as: "prediction detectable at Euclid's ~1% precision target."
+Note: This is a prediction under DESI w0+wa assumptions, not an independent ZCLP prediction.
+7. Oscillatory w(z) — Problem Identified
+Parameters: A=0.2, Ω=π/2
+z
+f(z) deviation
+0.50
+-13.69%
+1.00
+-10.80%
+1.45
+-6.76%
+2.00
+-2.82%
+3.00
++0.33%
+Problem: Inconsistent with existing RSD observations at z < 1.5.
+Cause: w(z) < -1.5 at high z, near-divergent.
+Judgment: A=0.2, Ω=π/2 parameters are inconsistent with observations.
+8. A(z) Investigation — On Hold
+A(z) = A₀/√η attempted → over-suppression, signal falls below Euclid detection limit (~1%)
+Decoherence mechanism proposed as alternative → functional form has no physical basis
+Direction undetermined. Not ready to send to Lux.
+9. ε = 8πGρ_DE (Lux derivation, Cloak approved)
+See ZCLP_hypotheses.md for full derivation.
+10. Dimensionless Boundary Definition Ξ (Lux derivation, Cloak approved)
+コード
+11. η=4 Transition Point — Numerical Calculation (Cloak)
+Model
+z_crit
+ΛCDM
+1.106
+DESI w0+wa
+1.131
+Δz_crit
+0.026
+Both models: z_crit ≈ 1.1, within Euclid range (z ≈ 0.9–1.8).
+Model discrimination from z_crit alone is difficult (Δz = 0.026).
+High-z η divergence (ΛCDM: 11.6 vs DESI: 13.9 at z=2) may enable model discrimination.
+12. GitHub README Rewritten (external-facing)
+Restructured from internal handoff format to external research audience format.
+English version (top) + Japanese version (below) — unified policy for all files.
+Current State
+Route-B (DESI w0+wa): +1.4% f(z) prediction at z=2. Within Euclid detection range. Publishable.
+Oscillatory w(z) (A=0.2): Inconsistent with RSD observations. Awaiting A(z) resolution.
+Overall: "Not falsified" status continues. Final verdict awaits Euclid + Rubin.
+Pending Lux Assignments
+Priority
+Item
+Status
+High
+ε determination condition
+From 2026-04-15, not returned
+High
+ε = 8πGρ_DE coefficient confirmation (w≠-1 case)
+From 2026-04-16, not returned
+Hold
+A(z) physical determination rule
+Direction undetermined
+Knowledge File Corrections (apply before next session)
+Dimensionless definition file: 4πG → 8πG (already corrected in hypotheses.md)
+ZCLP_hypotheses.md: Hypothesis C updated with today's progress ✅
+2026-04-16 作業記録
+作成：クロ（Cloak）
+実施内容
+1. 番外編（Observer-Scaling Branch）レビュー
+本線に引き込める候補：
+η = ρ_DM/ρ_DE の導入（仮説Cと直結）
+dt_obs ∝ d ln S_obs（w(z)導出の別ルート候補）
+ε = 8πGρ_DE（任意パラメータの物理化候補）
+留保事項：
+ε = 8πGρ_DEはw≠-1のときΦ_eff''の導出が未完
+ρ_threshold = 0の選択は「最も自然」だが「一意に決まる」とは言えない
+w(S_obs)への変換は変数変換の域を出ない
+2. Phase A（Pantheon+ S_obs検証）
+データ：Pantheon+ 1404サンプル（z=0.01〜2.26）
+S_obs = 1/(1+z) 単調減少：OK
+ln(1+z)連続性：OK
+判定：S_obsを観測者時間パラメータとして使用可
+3. Phase B（Ωスキャン）
+Ω=π/2、2π/3、πはPantheon+のzレンジで振動不可視
+根本原因：Ω=π/2の1周期にはz≈53が必要。観測可能レンジ外
+4. Phase B2（DESI DR1 Ωフィット）
+データ：DESI DR1 7点
+Best fit Ω = 0.100（bounds下限に張り付き）
+ZCLP予測 Ω = π/2 = 1.571、ズレ = 1.47 rad
+判定：DESIの現データはZCLPの振動モデルを支持しない。ただし決定的反証ではない
+5. 「4」の物理的根拠確定（クロ承認）
+ポアソン方程式のGR形式から必然的に出る
+一般化：η ≥ 1 - 3w
+6. Route-B f(z)厳密導出（クロ承認）
+DESI w0+waモデル前提での予測：z=2で+1.4%。Euclid検出可能レンジ内。
+注意：DESI観測値依存の計算。ZCLPの独立予測ではない。
+7. 振動型w(z)の問題確認
+A=0.2・Ω=π/2のパラメータはz<1.5で既存RSD観測と不整合。
+8. A(z)問題：方針未確定・保留
+A₀/√η：過剰抑制でEuclid検出限界以下
+デコヒーレンス機構：関数形の根拠未提示
+方針未確定。Lux投げできる状態ではない
+9. ε = 8πGρ_DE（Lux導出・クロ承認）
+10. 無次元化定義Ξ（Lux導出・クロ承認）
+コード
+11. η=4転換点の数値計算（クロ実施）
+モデル
+z_crit
+ΛCDM
+1.106
+DESI w0+wa
+1.131
+Δz_crit
+0.026
+z_crit ≈ 1.1はEuclid観測レンジ内。
+z_crit単体ではモデル識別困難。高zのηの乖離で識別できる可能性あり。
+12. GitHub README書き直し（外向け）
+引き継ぎプロンプト形式から外部向け形式に全面改訂。
+英語版（上）＋日本語版（下）で全ファイル統一。
+現在地
+Route-B（DESI w0+wa）：z=2でf(z)+1.4%予測。Euclid検出可能。公開可能。
+振動型（A=0.2）：RSD観測と不整合。A(z)導出待ち。
+総合：「排除されてない」状態継続。決着はEuclid・Rubin待ち。
+Lux投げ未回収
+優先度
+内容
+状態
+高
+εの決定条件
+4/15投げ・未回収
+高
+ε=8πGρ_DEの係数確認（w≠-1）
+4/16投げ・未回収
+保留
+A(z)の物理的決定則
+方針未確定
