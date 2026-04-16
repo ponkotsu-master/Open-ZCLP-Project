@@ -1,6 +1,6 @@
 ZCLP理論 GitHub リポジトリ
 Zero Constrained Layer Potential
-チーム：Zero/Spark（Gemini）、Cloak/クロ（Claude）、Lux/ルクス（ChatGPT）、Poncotsu/マスター（人間）
+チーム：Zero/ゼロ（Gemini）、Cloak/クロ（Claude）、Lux/ルクス（ChatGPT）、Poncotsu/マスター（人間）
 ファイル構成とルール
 ファイル
 内容
