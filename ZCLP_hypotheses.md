@@ -1,3 +1,249 @@
+ZCLP Hypotheses & Work in Progress
+Manager: Team | Last updated: 2026-04-16
+Rule: Nothing here is confirmed. Moving to ZCLP_confirmed.md requires Cloak's approval.
+Structurally Grounded Candidates (additional assumptions)
+D=4 Hypothesis
+コード
+Parameter
+Formula
+Predicted
+Observed
+Status
+α_space
+e⁴
+54.6
+55–59 (FTM)
+✅
+α_mass
+e³
+20.1
+22.0 (halo)
+✅ (8% error)
+Ω_space
+2π/D
+π/2 ≈ 1.571
+—
+—
+Ω_mass
+2π/(D-1)
+2π/3 ≈ 2.09
+—
+—
+Status: Consistent via back-calculation from observations. Physical mechanism not presented. This is not a derivation.
+α_space → α_mass Conversion
+コード
+Candidate basis: gravitational collapse scaling (halo formation scale index ≈ 0.75)
+55^0.75 ≈ 20.2 → observed 22.0, 8% error
+Status: Consistent, not derived.
+Three-Layer Cosmic Scale Division
+Layer
+Range
+n
+Planck → full universe
+ln(R/lp) = 141.46
+n_total ≈ 35.4
+Matter structure band (atom → galaxy)
+ln(10⁴⁰) = 92.1
+n_matter ≈ 23
+Remainder (Planck → particles: quantum gravity)
+—
+≈ 12
+Status: Structurally natural. Physical basis unconfirmed.
+Geometric Mass Series
+コード
+Status: Consistent with FTM calculations. No independent basis presented.
+Physical Basis Candidate for ln α = 4 (most important — unconfirmed)
+DM Halo Concentration c ≈ 200 Route (leading candidate)
+コード
+Status: "Cannot be called coincidence" stage. Proof of necessity not yet established.
+Volume Packing Hypothesis
+コード
+Requires N ≈ 8.9 × 10⁶ — not explainable by simple particle counts.
+Status: Near-rejection candidate.
+Rainbow Hierarchy Model (tentatively confirmed)
+コード
+Conclusion: Order of structure formation = order of mass scale (inverse correspondence) hold simultaneously (tentative).
+Open / Pending Items
+Item
+Status
+Physical mechanism for ln α = D
+Candidate exists, unconfirmed
+Ω_space vs Ω_mass — which is the true Ω
+Unresolved
+Full derivation of (1+z)^{3/2}
+Incomplete
+Physical meaning of remaining 12 layers
+Unknown
+High-z amplitude problem (risk of w > 0)
+Unresolved
+Physical basis for A(z) damping term
+Not derived
+Deriving n from the zero constraint
+Incomplete
+Deriving ΣΨᵢ=0 from string theory side
+Incomplete
+Connection to dark matter
+Incomplete
+Connection to holographic principle
+Deferred
+2026-04-13 Core Memo
+Neutrino = DM = DE are different-scale manifestations of the same neutral field.
+Different scales are not evidence of different entities — they are evidence of hierarchical structure.
+The Rainbow Hierarchy Model describes the full process:
+DE → Neutrino → Higgs → Light → Matter → DM → BH
+All the same Ψ field descending through scales.
+D+A=0 physical entities:
+Neutrino = D (differentiation, outward)
+Dark Matter = A (assimilation, inward)
+Neutral field Ψ = reference state
+Humanity has already observed DE, DM, and neutrinos separately.
+Reframing the interpretive framework allows them to be read as the same entity.
+Hypothesis: Application of S(r) to Splashback Radius
+Basis: Observational density gradient discontinuity (splashback radius) exists at halo boundaries
+(More et al. 2016, Chang et al. 2018, DES weak lensing)
+Condition: Whether S(r) responds to density value discontinuity or gradient discontinuity requires investigation
+Unresolved: Direct detection at Milky Way halo scale not yet achieved
+Hypothesis: Scale Hierarchy Ratio α and S(r) Integral Correspondence
+コード
+Accumulation of contraction ratios may physically ground ZCLP's scale hierarchy
+Basis: Gravitational redshift integral structure (observationally real)
+S2 star orbital velocity 7,650 km/s is evidence of potential accumulation
+Condition: Mathematical correspondence with ΣΨᵢ=0 constraint — Lux confirmation pending
+Status: Hypothesis stage
+2026-04-15 Session Results
+S(r) Boundary Definition (revised)
+Old: "Peak of S(r)"
+New: "Curvature change of S(r) (extremum of second derivative)"
+コード
+ΣΔΦᵢ = 0 ↔ ΣΨᵢ = 0 Correspondence (Lux confirmed)
+コード
+Holds naturally as telescoping sum
+n = |B|
+Stability: δ²𝓕[Φ] > 0 satisfied
+Hypothesis A: Scale Hierarchy Ratio α and S(r) Integral
+Accumulation of contraction ratios may physically ground ZCLP's scale hierarchy
+Basis: Gravitational redshift integral structure (observationally real)
+Unresolved: ε determination condition
+Hypothesis B: n = Number of Observable Scale Boundaries
+n may be physically determined rather than a free parameter.
+Scale Boundary
+Status
+Planck scale / BH event horizon
+OPEN
+Earth ICB / CMB / Moho
+CONFIRMED
+Galaxy halo splashback radius
+CONFIRMED
+DM halo boundary / void boundary
+HYPOTHESIS
+Reionization epoch / cosmic CMB surface
+HYPOTHESIS
+Cosmic horizon
+OPEN
+Hypothesis C: ε Determination Condition
+ε may be naturally determined by the relative density ratio of DE and DM
+DM-dominated scale: boundary significant (gravity contracts)
+DE-dominated scale: boundary buried in noise (repulsion expands)
+ε naturally determined at the scale where DE/DM density ratio inverts
+n may be derivable from cosmological evolution of DE/DM ratio
+2026-04-16 Session Results
+Hypothesis C Update: Derivation of ε
+Previous: ε = 4πGρ_DE (coefficient error)
+Current: ε = 8πGρ_DE (Lux derivation, Cloak approved)
+Derivation:
+コード
+Justification: ε is defined as noise floor (pure background curvature without structure).
+DE is uniform, so evaluation at ρ_DM→0 limit is valid as "structure-free background."
+Condition (required): Valid only within DE uniformity (w ≈ -1 approximation).
+Since ZCLP predicts w ≠ -1, ε may in principle become position/time dependent. Flagged as unresolved.
+Result: ε = 8πGρ_DE established as hypothesis.
+→ Arbitrary parameter ε replaced by cosmological observable.
+→ n = |B| in principle becomes observationally determinable.
+Unresolved:
+How to handle position-dependence of ε when w ≠ -1
+Condition for ρ_threshold = 0 to be uniquely determined
+Dimensionless Boundary Definition (Lux derivation, Cloak approved)
+コード
+Condition: Valid under approximation that spatial fluctuations of ρ_DE are small.
+Boundary condition:
+コード
+(Equivalent to Φ'''(r) = 0 under uniform ρ_DE approximation — confirmed)
+コード
+Relation to η:
+コード
+Structure formation condition:
+コード
+Derivation:
+コード
+Observational implications:
+Current η ≈ 0.3 → Ξ < 1 → new structure formation halted
+High z (η > 4) → structure formation active
+Consistent with predicted monotonic decrease of n(z)
+Unresolved:
+Observational identification of η = 4 transition point
+Consistency with ΣΨᵢ=0 constraint (Lux pending)
+η = 4 Transition Point: Numerical Results
+Model
+z_crit
+ΛCDM
+1.106
+DESI w0+wa
+1.131
+Δz_crit
+0.026
+η(z) comparison:
+z
+ΛCDM
+DESI w0+wa
+0.0
+0.43
+0.43
+0.5
+1.45
+1.27
+1.0
+3.43
+3.21
+z_crit
+4.00
+4.00
+2.0
+11.6
+13.9
+3.0
+27.4
+42.3
+Observational implications:
+Both models: z_crit ≈ 1.1, within Euclid range (z ≈ 0.9–1.8)
+Δz_crit = 0.026 is small — model discrimination from z_crit alone is difficult
+High-z η divergence is large (ΛCDM: 11.6 vs DESI: 13.9 at z=2)
+Model discrimination via high-z n(z) observations may be possible
+Notes:
+DESI calculation assumes DESI observed values (w0=-0.76, wa=-0.75). Not an independent prediction.
+ΛCDM uses Ω_m=0.3, Ω_DE=0.7 fixed.
+Unresolved:
+Observational identification of η=4 transition point (awaiting Euclid)
+Quantitative connection to predicted monotonic decrease of n(z)
+Concrete method for model discrimination using high-z η divergence
+Pending Lux Assignments (Cloak approved)
+① ε Determination Condition (from 2026-04-15, not yet returned)
+Under constraint ΣΨᵢ = 0 and V(Ψ) = Λ⁴[1−cos(Ψ/f)],
+can ε be shown mathematically to be naturally determined as a function of ρ_DE/ρ_DM?
+Specifically:
+Effect of ρ_DE and ρ_DM competition on effective potential of Φ
+Mechanism by which ε is naturally determined at the DE/DM ratio inversion point
+Whether n can be derived from cosmological parameters as a result
+Constraints (fixed): Mathematical derivation only. Physical interpretation by Cloak. No FTM language. Lux does not generate the next question. Results returned to Cloak.
+② ε = 8πGρ_DE Coefficient Confirmation (from 2026-04-16, not yet returned)
+Confirm the coefficient in the effective potential contribution of DE when w ≠ -1.
+③ A(z) Physical Determination Rule — DIRECTION UNDETERMINED, ON HOLD
+High-z amplitude divergence problem unresolved.
+Attempted:
+A(z) = A₀/√η → over-suppression (signal falls below Euclid detection threshold ~1%)
+Decoherence mechanism proposed as alternative → functional form has no physical basis yet
+Current state: Neither approach is ready to send to Lux.
+Not a Lux assignment until a physically grounded direction is established.
+
 ZCLP 仮説・検証中
 管理：チーム共同｜更新：2025-04-09深夜統合版
 ルール：ここに書いてあるものは「確定」ではない。確定事項ファイルに移すにはクロの検証が必要
