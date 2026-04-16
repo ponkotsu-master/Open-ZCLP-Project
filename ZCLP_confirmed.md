@@ -1,3 +1,84 @@
+ZCLP Confirmed Results
+Manager: Cloak | Last updated: 2026-04-16
+Rule: Additions to this file require Cloak's approval.
+Mathematically Confirmed (Proven)
+Core Constraint
+コード
+Proof structure:
+Variation w.r.t. λ → ΣΨᵢ = 0 emerges as a constraint
+Sum of equations of motion for all modes → λ is determined automatically
+λ = -(1/n) ΣV'(Ψᵢ)
+Center of mass of the field system is fixed → ΣΨᵢ(t) = 0 holds at all times
+Lagrangian
+コード
+Equation of Motion (per mode)
+コード
+The "mean-gradient subtraction" term is the physical core of ZCLP.
+This structure does not appear in standard scalar field theory.
+Degrees of Freedom
+コード
+Potential (confirmed)
+コード
+Small-amplitude approximation: m² = Λ⁴/f², f = H₀⁻¹, Λ ≈ H₀, m ≈ H₀
+Physically Confirmed (Demonstrated)
+Result
+Basis
+w > -1
+Phase-space measure-zero argument
+wₐ < 0
+Follows from damped oscillation
+λ determined automatically
+From sum of equations of motion
+Log oscillation in w(z) emerges naturally
+DE-dominated expansion: a(t) ∝ e^{H₀t} → t ∝ ln(1+z)
+Interference term Ψ̇ᵢΨ̇ⱼ emerges naturally
+Follows from ΣΨᵢ = 0
+Relation Ω = 2π/ln α
+From definition
+Ω = π/2 when ln α ≈ 4
+Identity
+Structure formation condition: η ≥ 4, z_crit ≈ 1.13
+From dimensionless boundary definition Ξ (2026-04-16)
+Predicted w(z) Curve (confirmed form)
+コード
+A ≈ 0.2 (from n ≈ 25 modes)
+Ω ≈ π/2 (Ω_space) or 2π/3 (Ω_mass)
+Which Ω is the true value is not yet determined → see ZCLP_hypotheses.md
+Amplitude Hierarchy (confirmed)
+Symbol
+Value
+Origin
+A₀ ≈ 1
+Initial amplitude
+Normalization of V(Ψ) (confirmed 2026-04-13)
+A_pred = 0.2
+Predicted amplitude
+Statistical variance of n ≈ 25 modes under ΣΨᵢ = 0 constraint
+A_fit = 0.06
+Fitted value
+Observational fit — mechanism unknown, unresolved
+Derivation structure: A ≈ A₀/√n
+Note: requires phase-randomness assumption and equal-amplitude assumption → managed as conditional values in hypotheses.md
+Falsification Conditions (defined before data)
+Test ①: Periodicity in log-k space
+Period not detected in SDSS/DESI → rejected
+Period detected but equally explainable by ΛCDM → rejected
+Period values inconsistent across multiple datasets → rejected
+Test ②: Scale hierarchy ratio
+Observed ratio deviates from α ≈ 55 by more than 2σ → rejected
+Hierarchy peaks statistically indistinguishable from random distribution → rejected
+Test ③: w(z) curve
+No significant difference from ΛCDM in DESI → rejected
+Ω matches neither Ω_space nor Ω_mass → rejected
+Amplitude diverges at high z; fit clearly worse than ΛCDM → rejected
+Significance Thresholds (fixed, not to be changed after data)
+Stage
+Threshold
+Exploration
+2σ
+Publication / external presentation
+3σ (required)
+These thresholds are not to be revised after data collection.
 
 ZCLP 確定事項
 管理：クロ（Cloak）｜更新：2025-04-09深夜統合版
