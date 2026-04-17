@@ -608,3 +608,44 @@ z_crit  4.00    4.00
 ・η=4転換点の観測的特定（Euclid待ち）
 ・n(z)単調減少予測との定量的接続
 ・高zのηの乖離を使ったモデル識別の具体的手法
+
+2026-04-17 Lux Retrieval: General Form of ε(z) and Uniqueness of ρ_threshold = 0
+Retrieval 1: General form of ε(z)
+ε(z) = 4πG (1 + 3w(z)) ρ_DE(z)
+Derivation: Substituting the component decomposition into the GR Poisson equation ∇²Φ = 4πG(ρ + 3p). Reduces to ε = 8πGρ_DE at w = -1 (consistent with the 4/16 identification).
+Reservations:
+FLRW assumption. Spatial dependence recovers if δρ_DE is present.
+Mainly valid for w < -1/3 (accelerating regime). Sign reversal occurs for w > -1/3.
+Connection with ΣΨᵢ = 0 is at the level of consistency, not derivation.
+Retrieval 2: Uniqueness of ρ_threshold = 0
+ρ_threshold = 0
+Derivation: From the bifurcation condition d²δ/dt² = 0 of the linear growth equation d²δ/dt² + 2H dδ/dt = 4πG ρ_eff δ, we obtain ρ_eff = 0. If ρ_eff ≠ 0, the solution is either always growing or always decaying, and no boundary exists.
+Reservations:
+This conclusion is not specific to ZCLP; it is a consequence of standard linear growth theory.
+ΣΨᵢ = 0 is not a direct basis for uniqueness, but serves as a precondition ensuring background stability and the definability of the effective potential.
+The result follows automatically once the structure formation boundary is defined by d²δ/dt² = 0.
+Status: Both retrievals are conditionally approved.
+Resolved backlog:
+ε spatial/temporal dependence problem → Resolved (formulated as the general form ε(z) = 4πG(1+3w)ρ_DE).
+Uniqueness of ρ_threshold = 0 → Conditionally resolved (with the reservation that it is not specific to ZCLP).
+Note (Cloak's evaluation): Today's retrieval only confirms that the results are "consistent with ZCLP," not that "ZCLP is required to explain them." ZCLP's predictive power still rests on the log-k periodicity Δ(ln ℓ) ≈ 4 and Ω = π/2.
+
+2026-04-17 Lux投げ回収：ε(z)一般形 と ρ_threshold=0 の一意性
+回収1：ε(z) の一般形
+ε(z) = 4πG (1+3w(z)) ρ_DE(z)
+導出：GRのポアソン方程式 ∇²Φ = 4πG(ρ + 3p) に成分分解を代入。w = -1 で ε = 8πGρ_DE に帰着（4/16同定と整合）。
+留保：
+FLRW前提。δρ_DE があれば空間依存が復活
+主に w < -1/3（加速領域）で有効。w > -1/3 では符号反転
+ΣΨᵢ=0 との接続は整合レベル（導出ではない）
+回収2：ρ_threshold = 0 の一意性
+ρ_threshold = 0
+導出：線形成長方程式 d²δ/dt² + 2H dδ/dt = 4πG ρ_eff δ の分岐条件 d²δ/dt² = 0 から ρ_eff = 0。ρ_eff ≠ 0 だと常に成長 or 常に減衰となり境界が存在しない。
+留保：
+この結論は ZCLP固有ではなく、標準的な線形成長理論の帰結
+ΣΨᵢ=0 は直接的な一意性の根拠ではなく、背景の安定性と有効ポテンシャル定義可能性を保証する前提条件
+「構造形成境界を d²δ/dt²=0 で定義する」ことで自動的に出る結論
+状態：両回収とも「条件付き承認」
+積み残し解消：
+εの場所・時間依存問題 → 解消（一般形 ε(z) = 4πG(1+3w)ρ_DE で定式化）
+ρ_threshold=0 の一意性 → 条件付き解消（ZCLP固有でない点に留保）
