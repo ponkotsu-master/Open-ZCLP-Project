@@ -649,3 +649,55 @@ FLRW前提。δρ_DE があれば空間依存が復活
 積み残し解消：
 εの場所・時間依存問題 → 解消（一般形 ε(z) = 4πG(1+3w)ρ_DE で定式化）
 ρ_threshold=0 の一意性 → 条件付き解消（ZCLP固有でない点に留保）
+
+2026-04-18 Lux Retrieval: Downgrading of lnα = D
+Question: Physical mechanism of lnα = D (derivability from the ΣΨᵢ = 0 constraint)
+Lux's response:
+Range reliably derivable from within ZCLP:
+N ∝ R³ (Fourier mode counting)
+R ∝ N^{1/3}
+Elimination of the k=0 mode by ΣΨᵢ = 0
+Not derivable from within ZCLP (external inputs):
+lnα = D
+Coefficient 3/4 (the exponent in α = R^{3/4})
+D = 4
+DM halo concentration c ≈ 200
+Cloak's judgment:
+lnα = D is not a "necessary consequence of ZCLP" but a "consistency relation when external conditions are satisfied."
+Downgraded from "structural basis candidate exists" to "not derived."
+The DM halo c≈200 route is downgraded from "leading candidate" to "one of the candidates."
+Impact on ZCLP overall:
+The core (ΣΨᵢ = 0 constraint, V(Ψ), falsification conditions) remains intact.
+However, the physical necessity of lnα = 4 has now been confirmed as not derivable from ZCLP alone.
+ZCLP is a theory that accepts lnα = D as an external condition. lnα = D itself is a fact to be verified observationally (SDSS/DESI), not an internal necessity of ZCLP.
+Unresolved (priority):
+Physical definition of α
+Origin of the coefficient 3/4
+Determination condition of D = 4
+Theoretical selection mechanism for c ≈ 200
+
+2026-04-18 Lux投げ回収：lnα = D の格下げ
+問い：lnα = D の物理的メカニズム（ΣΨᵢ=0 拘束からの導出可否）
+Luxからの回答：
+ZCLP内部から確実に導出できる範囲：
+N ∝ R³（フーリエモード数）
+R ∝ N^{1/3}
+ΣΨᵢ=0 による k=0 モード消失
+ZCLP内部から導出できない（外部入力）：
+lnα = D
+係数 3/4（α = R^{3/4} の指数）
+D = 4
+DMハロー濃度 c ≈ 200
+クロ判定：
+lnα = D は「ZCLPから必然的に出る」ではなく「外部条件を満たした場合の整合関係」
+従来の「構造的根拠候補あり」から「未導出」へ格下げ
+DMハロー c≈200 経路は「最有力候補」から「候補の一つ」へ
+ZCLP全体への影響：
+根幹（ΣΨᵢ=0 拘束、V(Ψ)、反証条件）は無傷
+ただし lnα=4 の物理的必然性は ZCLP 単体では示せないことが確定
+ZCLPは lnα=D を外部条件として受け入れる理論。lnα=D 自体は SDSS/DESI 観測で確認されるべき事実
+未解決（優先）：
+αの物理的定義
+係数 3/4 の起源
+D = 4 の決定条件
+c ≈ 200 の理論的選択機構
