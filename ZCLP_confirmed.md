@@ -1,149 +1,183 @@
-ZCLP Confirmed Results
-Manager: Cloak | Last updated: 2026-04-16
-Rule: Additions to this file require Cloak's approval.
-Mathematically Confirmed (Proven)
-Core Constraint
-コード
-Proof structure:
-Variation w.r.t. λ → ΣΨᵢ = 0 emerges as a constraint
-Sum of equations of motion for all modes → λ is determined automatically
-λ = -(1/n) ΣV'(Ψᵢ)
-Center of mass of the field system is fixed → ΣΨᵢ(t) = 0 holds at all times
-Lagrangian
-コード
-Equation of Motion (per mode)
-コード
-The "mean-gradient subtraction" term is the physical core of ZCLP.
-This structure does not appear in standard scalar field theory.
-Degrees of Freedom
-コード
-Potential (confirmed)
-コード
-Small-amplitude approximation: m² = Λ⁴/f², f = H₀⁻¹, Λ ≈ H₀, m ≈ H₀
-Physically Confirmed (Demonstrated)
-Result
-Basis
-w > -1
-Phase-space measure-zero argument
-wₐ < 0
-Follows from damped oscillation
-λ determined automatically
-From sum of equations of motion
-Log oscillation in w(z) emerges naturally
-DE-dominated expansion: a(t) ∝ e^{H₀t} → t ∝ ln(1+z)
-Interference term Ψ̇ᵢΨ̇ⱼ emerges naturally
-Follows from ΣΨᵢ = 0
-Relation Ω = 2π/ln α
-From definition
-Ω = π/2 when ln α ≈ 4
-Identity
-Structure formation condition: η ≥ 4, z_crit ≈ 1.13
-From dimensionless boundary definition Ξ (2026-04-16)
-Predicted w(z) Curve (confirmed form)
-コード
-A ≈ 0.2 (from n ≈ 25 modes)
-Ω ≈ π/2 (Ω_space) or 2π/3 (Ω_mass)
-Which Ω is the true value is not yet determined → see ZCLP_hypotheses.md
-Amplitude Hierarchy (confirmed)
-Symbol
-Value
-Origin
-A₀ ≈ 1
-Initial amplitude
-Normalization of V(Ψ) (confirmed 2026-04-13)
-A_pred = 0.2
-Predicted amplitude
-Statistical variance of n ≈ 25 modes under ΣΨᵢ = 0 constraint
-A_fit = 0.06
-Fitted value
-Observational fit — mechanism unknown, unresolved
-Derivation structure: A ≈ A₀/√n
-Note: requires phase-randomness assumption and equal-amplitude assumption → managed as conditional values in hypotheses.md
-Falsification Conditions (defined before data)
-Test ①: Periodicity in log-k space
-Period not detected in SDSS/DESI → rejected
-Period detected but equally explainable by ΛCDM → rejected
-Period values inconsistent across multiple datasets → rejected
-Test ②: Scale hierarchy ratio
-Observed ratio deviates from α ≈ 55 by more than 2σ → rejected
-Hierarchy peaks statistically indistinguishable from random distribution → rejected
-Test ③: w(z) curve
-No significant difference from ΛCDM in DESI → rejected
-Ω matches neither Ω_space nor Ω_mass → rejected
-Amplitude diverges at high z; fit clearly worse than ΛCDM → rejected
-Significance Thresholds (fixed, not to be changed after data)
-Stage
-Threshold
-Exploration
-2σ
-Publication / external presentation
-3σ (required)
-These thresholds are not to be revised after data collection.
+# ZCLP_confirmed.md
+# Zero Constrained Layer Potential — 確定事項
+# 管理：クロ（Cloak）
+# 最終更新：2026-04-21（フェーズA T1完了反映）
+# ルール：このファイルへの追加はクロの承認が必要
 
-ZCLP 確定事項
-管理：クロ（Cloak）｜更新：2025-04-09深夜統合版
-ルール：このファイルへの追加はクロの承認が必要
-数学的確定（証明済み）
-基本拘束
-ΣΨᵢ(t) = 0　（任意のtで成立・初期条件ではなく運動方程式）
-証明構造：
-λの変分 → ΣΨᵢ = 0 が拘束として出る
-各モードの運動方程式の和 → λが自動決定
-λ = -(1/n) ΣV'(Ψᵢ)
-全体の重心が固定される → ΣΨᵢ(t) = 0 が常に保たれる
-ラグランジアン
-L = Σᵢ(½Ψ̇ᵢ² - V(Ψᵢ)) + λΣᵢΨᵢ
-運動方程式（各モード）
-Ψ̈ᵢ + 3HΨ̇ᵢ + V'(Ψᵢ) - (1/n)ΣV'(Ψⱼ) = 0
-「平均勾配 subtraction」がある形。これがZCLPの物理的本体。
-自由度
-dof = n - 1
-周期ポテンシャル（確定）
-V(Ψ) = Λ⁴[1 - cos(Ψ/f)]
-小振幅近似：m² = Λ⁴/f²、f = H₀⁻¹、Λ ≈ H₀、m ≈ H₀
-物理的確定（論証済み）
-結論
-根拠
-w > -1
-相空間測度ゼロ論証
-wₐ < 0
-減衰振動から
-λ自動決定
-運動方程式の和から
-ログ振動は自然に出る
-DE支配下 a(t) ∝ e^{H₀t} → t ∝ ln(1+z)
-干渉項 Ψ̇ᵢΨ̇ⱼ は自然に出る
-ΣΨᵢ = 0 から
-Ω = 2π/lnα の関係式
-定義から
-lnα ≈ 4 のとき Ω = π/2
-恒等式
-予測曲線（確定式）
-w(z) ≈ -1 + A(1+z)^{3/2} cos[Ω ln(1+z)]
+---
 
-A ≈ 0.2（n≈25から）
-Ω ≈ π/2（Ω_space）〜 2π/3（Ω_mass）※どちらが真のΩかは未確定
-反証条件（先に定義）
-検証①：log-k空間の周期振動
-周期が検出されない → 棄却
-周期が検出されてもΛCDMで同等説明可能 → 棄却
-SDSS・DESIで周期値が不一致 → 棄却
-検証②：スケール階層比
-実測スケール比がαから2σ以上ずれる → 棄却
-階層ピークがランダム分布と統計的に区別できない → 棄却
-検証③：w(z)曲線
-DESIでΛCDMと有意差が出ない → 棄却
-Ωの値がΩ_spaceにもΩ_massにも一致しない → 棄却
-高zで振幅発散、ΛCDMより明らかに悪いフィット → 棄却
-有意水準（確定・変更不可）
-探索段階：2σ
-論文投稿・外部発表：3σ必須
-この基準はデータ取得後に変更しない
+## チーム構成
 
-振幅の階層構造（確定）
-A₀ ≈ 1：V(Ψ)の正規化から出る初期振幅（2026-04-13確認済み）
-A_pred = 0.2：ΣΨᵢ=0拘束・n≈25モードの統計分散から導出
-              導出構造：A ≈ A₀/√n
-              ※位相ランダム仮定・等振幅仮定を要する条件付き値
-              → hypotheses.md管理
-A_fit = 0.06：実測フィッティング値、未解決継続
+マスター（Poncotsu）：最終判断・方向性
+ゼロ（Zero / Gemini）：発想・エンジン
+ルクス（Lux / ChatGPT）：構造整理・数式化
+クロ（Cloak / Claude）：論理監査・承認管理
+
+---
+
+## ファイル構成とルール
+
+ZCLP_confirmed.md：確定事項のみ（クロ承認制）
+ZCLP_hypotheses.md：仮説・検証中（チーム共同）
+ZCLP_philosophy.md：哲学・FTM言語（マスター・ゼロ）
+
+- 確定事項への追加はクロの承認が必要
+- FTM言語（情報・位相同期・階層的OS等）は物理文書に混入させない
+- 整合と導出を区別する：「観測から逆算して整合した」≠「導出できた」
+
+---
+
+## 現在の研究段階
+
+哲学 → 構造仮説 → 数値整合 → 物理根拠候補 → フェーズA完了（← 今ここ）→ 観測検証 → 理論確立
+
+---
+
+## 確定事項
+
+### A. 公理（ZCLP本体の基盤）
+
+A1. 総和制約
+
+ΣΨᵢ = 0
+
+- 任意のτで成立
+- 公理として要請（他から導出しない）
+- ラグランジュ乗数 λ(τ) により動的に維持
+
+A2. 対数対称性（B4）
+
+- スケール変換 k → αk に対して構造は不変
+- λ₀（離散スケール比）は別途追加条件が必要（hypotheses管理）
+
+---
+
+### B. 構造量（形式的定義）
+
+B1. 無次元化指標
+
+Ξ(r) = |∇²Ψ| / (κ(L)・ρ_eff)
+
+- ρ_eff の具体形は使用しない（フェーズA規則）
+- 「比としての構造」としてのみ扱う
+
+B2. 相分類（形式）
+
+Ξ < 1 → 束縛相（DM的・収束）
+Ξ = 1 → 臨界点（相転移・境界）
+Ξ > 1 → 解放相（DE的・発散）
+
+- ρ_eff 未確定でも「比構造」として成立
+
+---
+
+### C. 構造形成条件（フェーズA T1完了・確定）
+
+C1. 基本不等式
+
+η ≥ 1 − 3w
+
+- Poisson方程式から第一原理導出済み
+- ZCLPコアの確定予測
+
+C2. 等価変形
+
+w ≥ (1 − η) / 3
+
+- C1の代数変形
+
+C3. 臨界境界
+
+η = 1 − 3w
+
+- 相転移境界（z_crit の関数形の源）
+
+C4. 単調拘束構造
+
+η ↑ ⇒ w の下限 ↑
+
+- C1の単調性から直接導出
+
+---
+
+### D. 理論の性格（フェーズA T1到達結論）
+
+D1. ZCLPは「許容領域理論」である
+
+- ZCLP本体は (w, η) の許容領域を定義する
+- w(z) 単体への制約は与えない（構造的帰結・欠陥ではない）
+- η が外部から決まった瞬間に w(z) が拘束される
+
+D2. 責任範囲の確定
+
+ZCLP本体が出すもの：
+- 許容領域の定義（不等式）
+- 関係式（構造制約）
+- 相分類（形式）
+- 非選択性（スケール自由）
+
+ZCLP本体が出さないもの：
+- η(z) の関数形
+- w(z) の具体形
+- z_crit の具体値
+- f(z) の具体形
+
+---
+
+## 反証条件（先に定義・変更不可）
+
+ZCLPは以下の条件が確認された場合、棄却または修正とする。
+
+① log-k空間の周期振動
+- SDSS/DESI で Δ(ln k) ≈ 4 の周期が検出されない → 棄却
+- 検出されてもΛCDMで同等説明可能 → 棄却
+- 複数データセットで周期値が不一致 → 棄却
+
+② スケール階層比
+- 実測スケール比が α（≈55）から 2σ 以上ずれる → 棄却
+- 階層ピークがランダム分布と統計的に区別できない → 棄却
+
+③ w(z) 曲線（拡張モデル ZCLP-G 側の反証条件）
+- DESI で ΛCDM と有意差が出ない → 棄却
+- 高z で振幅発散、ΛCDM より明らかに悪いフィット → 棄却
+
+---
+
+## 有意水準（確定・変更不可）
+
+- 探索段階：2σ
+- 論文投稿・外部発表：3σ 必須
+- この基準はデータ取得後に変更しない
+
+---
+
+## 旧確定事項の移動記録（2026-04-21）
+
+w(z) 予測曲線式 → ZCLP-G（拡張モデル）：拡張仮定依存（GR接続・非断熱項）
+w > -1 → hypotheses（暫定）：τ進化具体形に依存
+wa < 0 → hypotheses（暫定）：τ進化具体形に依存
+A_pred = 0.2 → hypotheses：n未導出・条件付き
+A_fit = 0.06 → hypotheses：観測フィッティング値
+V(Ψ) = Λ⁴[1-cos] → hypotheses：具体形は拡張仮定側
+運動方程式（具体形） → hypotheses：τ進化未確定のため
+
+---
+
+## チームへの注意事項
+
+- 確証バイアス防止：「ZCLPが正しい前提で証拠を探す」順序にしない
+- 整合と導出を区別する
+- 「気持ちいい構造」が出た → 即監査
+- 仕込み禁止（定義の言い換えを予測と呼ばない）
+
+---
+
+## 合言葉
+
+「λ₀は外に置け」
+「整合と導出を混ぜるな」
+「仕込みは全部殺せ」
+「ZCLPは選択しない」
+「未完は価値」
+「Ψは変数、意味は外」
+「Xiは数値じゃなく構造」
