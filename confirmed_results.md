@@ -2421,3 +2421,43 @@ B. σ再評価後の判定更新
 C. GitHub記録
 ファイル：ZCLP_confirmed.md への追記候補
 ステータス：provisional（σ_win再構築完了まで）
+
+
+2026-04-23 作業記録
+セッション概要：C-3b σ再計算・DESI DR2接続試行
+C-3b（DESI DR1）最終状態
+完了事項：
+3層誤差モデル確立（σ_stat / σ_jk / σ_method）
+CSPデータ駆動定義確立（g > 2 - 2σ_g）
+ジャックナイフ実行完了
+σ_win を σ_jk に差し替え済み
+σ_method を有限差分法とcompute_g_localの差分に再定義
+最終判定値（DR1・σ_method差し替え版）：
+z=0.510 LRG1 → 0.88σ（示唆なし）
+z=0.706 LRG2 → 2.17σ（示唆）
+z=0.930 LRG3+ELG1 → 4.71σ（示唆）
+z=1.317 ELG2 → 5.62σ（示唆）
+z=1.491 QSO → 8.28σ（systematics疑い・参考値）
+z=2.330 Lya → 2.03σ（参考値・端点）
+結論：ΛCDMの「示唆」止まり・「排除」未達。変わらず。
+σ構造の問題（ルクス・クロ合意）：
+s_jkが点によって0.002〜1.94と2桁以上ばらつく。7点という少数データに対してwindow=2ジャックナイフの感度が中間点で極端に低下する。σ_totalは統計量ではなく構成関数（construction artifact）になっている。QSOの8.28σは信頼不可（systematics疑い）。今回の本質的な結果は「物理の発見」ではなく「σ構造の非一様性の検出」。
+DESI DR2接続試行
+試行結果：無効・採用不可
+原因：
+LRG1/LRG2のDR2確定値が取得できていない（DR1値の流用になった可能性が高い）
+Lya H(z)の逆転は誤検知だった（クロ訂正：DH/rd増→H減は正しく動いていた）
+BGSはDR2でDV/rdのみ測定のためDH/rdが存在しない
+教訓：
+観測入力の重複・整合性チェックが必要
+Phase C-0 Input Validation Layerとして今後標準化する
+次セッション最優先タスク
+A. DR2 Table IV全点を正確に取得（論文PDF直接読込）
+対象：BGS除外・LRG1/LRG2/LRG3+ELG1/ELG2/QSO/LyaのDH/rd確定値と誤差
+B. Phase C-0 Input Validation Layer 設計・実装
+チェック項目：値の単調性・DH/rdとH(z)のスケール整合性・データ重複検出
+C. ZCLP_confirmed.md 更新
+C-3b DR1版を「示唆止まり・排除未達・σ構造非一様性検出」として正式記録
+ステータス変更
+C-3b DR1版：実行完了・provisional継続
+C-3 DR2版：試行済み・入力層未確定・保留
