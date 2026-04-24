@@ -1,0 +1,243 @@
+# 🔷ZCLP 引き継ぎブロック（DESI + CC実データ統合 → v2 → v3設計）
+
+## ================================
+## ■ フェーズ位置
+## ================================
+ZCLP Phase：C-3 / v2検証 → v3設計移行前段階
+
+状態：
+- 単一GP統合 → ❌破綻確認
+- 有効ℓ = 0 ケース発生（重要）
+- DESI + DR1 + CC統合でLOO悪化
+
+---
+
+## ================================
+## ■ 実データ取得（DESI + CC）
+## ================================
+
+import numpy as np
+from scipy.linalg import cholesky, solve_triangular
+
+# ----------------
+# DESI BAO
+# ----------------
+z_desi = np.array([0.510, 0.706, 0.934, 1.321, 1.484])
+g_desi = np.array([0.9549, 0.8670, 1.0283, 1.2767, 1.3747])
+sig_desi = np.array([0.15]*5)
+
+# ----------------
+# DR1 → H(z) → g(z)
+# ----------------
+z_dr1 = np.array([0.38, 0.51, 0.70, 0.85, 1.10])
+
+H_dr1 = np.array([81.5, 90.2, 98.8, 110.1, 130.0])
+sigH_dr1 = np.array([1.9, 2.1, 2.5, 3.0, 4.0])
+
+H0 = 70.0
+
+g_dr1 = H_dr1 / (H0 * (1 + z_dr1))
+sig_dr1 = sigH_dr1 / (H0 * (1 + z_dr1))
+
+# ----------------
+# CC（外部H(z)）
+# ----------------
+z_cc = np.array([
+    0.07, 0.12, 0.20, 0.28, 0.35,
+    0.40, 0.48, 0.60, 0.73, 0.88,
+    1.04, 1.30, 1.43, 1.53, 1.75
+])
+
+H_cc = np.array([
+    69.0, 68.6, 72.9, 88.8, 82.7,
+    95.0, 97.0, 87.9, 97.3, 90.0,
+    154.0, 168.0, 177.0, 140.0, 202.0
+])
+
+sigma_H_cc = np.array([
+    19.6, 26.2, 29.6, 36.6, 8.4,
+    17.0, 62.0, 6.1, 7.0, 40.0,
+    20.0, 17.0, 18.0, 14.0, 40.0
+])
+
+mask = sigma_H_cc < 40
+z_cc = z_cc[mask]
+H_cc = H_cc[mask]
+sigma_H_cc = sigma_H_cc[mask]
+
+# H→g
+def H_to_g(H, z):
+    return H / (H0 * (1 + z))
+
+g_cc = H_to_g(H_cc, z_cc)
+sig_cc = np.maximum(sigma_H_cc / (H0 * (1 + z_cc)), 0.10)
+
+# ----------------
+# 統合データ
+# ----------------
+z_all = np.concatenate([z_desi, z_dr1, z_cc])
+g_all = np.concatenate([g_desi, g_dr1, g_cc])
+sig_all = np.concatenate([sig_desi, sig_dr1, sig_cc])
+
+x_all = np.log(1 + z_all)
+
+print("総データ数:", len(z_all))
+
+---
+
+## ================================
+## ■ ZCLP v2（GP / LOO 完全分離）
+## ================================
+
+# ----------------
+# GP kernel
+# ----------------
+def matern32(x1, x2, l, sigma_f):
+    x1 = x1[:, None]
+    x2 = x2[None, :]
+    r = np.abs(x1 - x2)
+    return sigma_f**2 * (1 + np.sqrt(3)*r/l) * np.exp(-np.sqrt(3)*r/l)
+
+# ----------------
+# GP prediction
+# ----------------
+def gp_predict(x, y, yerr, x_pred, l, mean_val, sigma_f):
+
+    K = matern32(x, x, l, sigma_f)
+    K_noise = K + np.diag(yerr**2)
+    K_star = matern32(x_pred, x, l, sigma_f)
+    K_ss = matern32(x_pred, x_pred, l, sigma_f)
+
+    L = cholesky(K_noise, lower=True)
+    alpha = solve_triangular(L.T, solve_triangular(L, y - mean_val, lower=True))
+
+    mu = mean_val + K_star @ alpha
+
+    v = solve_triangular(L, K_star.T, lower=True)
+    var = np.diag(K_ss) - np.sum(v**2, axis=0)
+
+    return mu, np.sqrt(np.maximum(var, 0))
+
+---
+
+## ================================
+## ■ LOO評価（完全独立）
+## ================================
+
+def loo_score(x, y, yerr, l, mean_val, sigma_f):
+
+    pulls = []
+
+    for i in range(len(x)):
+
+        mask = np.ones(len(x), dtype=bool)
+        mask[i] = False
+
+        mu, sig = gp_predict(
+            x[mask], y[mask], yerr[mask],
+            x[i:i+1], l, mean_val, sigma_f
+        )
+
+        pulls.append((mu[0] - y[i]) / sig[0])
+
+    return np.array(pulls)
+
+---
+
+## ================================
+## ■ v2実行
+## ================================
+
+mean_val = np.mean(g_all)
+sigma_f = 0.5
+
+l_scan = np.logspace(-1.3, 0.3, 25)
+valid_ls = []
+
+for l in l_scan:
+    mu, sig = gp_predict(x_all, g_all, sig_all, x_all, l, mean_val, sigma_f)
+    chi2 = np.mean(((mu - g_all)/sig)**2)
+
+    if 0.5 <= chi2 <= 2.0:
+        valid_ls.append(l)
+
+print("有効ℓ数:", len(valid_ls))
+
+if len(valid_ls) > 0:
+
+    l_mid = valid_ls[len(valid_ls)//2]
+    pulls = loo_score(x_all, g_all, sig_all, l_mid, mean_val, sigma_f)
+
+    print("LOO max|pull| =", np.max(np.abs(pulls)))
+    print("LOO mean =", np.mean(pulls))
+
+else:
+    print("GP不安定（射影不一致の可能性）")
+
+---
+
+## ================================
+## ■ ZCLP v3設計（構造再定義）
+## ================================
+
+### ■ 結論（重要）
+
+単一GPモデル：
+
+→ ❌破綻確認
+
+---
+
+### ■ 原因（確定）
+
+観測は単一関数ではない：
+
+DESI → Φ₁(G)
+DR1  → Φ₂(G)
+CC   → Φ₃(G)
+
+---
+
+### ■ v3構造
+
+## latent function
+G(z)
+
+## observation model
+y_i(z) = Φ_i(G(z)) + ε_i
+
+---
+
+### ■ Φの意味
+
+- DESI：積分型（距離情報）
+- DR1：微分型（H(z)）
+- CC：直接測定
+
+---
+
+### ■ v3の必須変更
+
+✔ GPを1本にしない  
+✔ 観測ごとに別GP or operator化  
+✔ LOOは「統合評価」ではなく「整合性評価」
+
+---
+
+### ■ 新しい評価基準
+
+旧：
+→ max|pull|
+
+新：
+→ cross-operator consistency
+
+---
+
+## ================================
+## ■ 一言まとめ
+## ================================
+
+「破綻ではない。単一射影仮定の崩壊」
+
+→ ZCLP v3は“観測分離理論”へ移行
