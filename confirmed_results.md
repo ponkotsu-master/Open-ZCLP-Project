@@ -2576,3 +2576,7 @@ C-3c：GP再構成による g(z) 推定（2026-04-23）
 
 ラベル：Phase-C / provisional / GR-dependent
 
+ZCLP v3 引き継ぎ文書
+2026-04-24 作成：クロ（Cloak）
+
+
