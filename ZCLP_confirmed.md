@@ -1,5 +1,5 @@
-# ZCLP_confirmed.md
-# Zero Constrained Layer Potential — Confirmed Facts
+ ZCLP_confirmed.md
+ Zero Constrained Layer Potential — Confirmed Facts
 # Managed by: Cloak (Claude)
 # Last updated: 2026-04-21 (Phase A T1 completion)
 # Rule: Additions to this file require Cloak's approval
