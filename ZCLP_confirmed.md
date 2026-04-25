@@ -1,8 +1,8 @@
  ZCLP_confirmed.md
  Zero Constrained Layer Potential — Confirmed Facts
-# Managed by: Cloak (Claude)
-# Last updated: 2026-04-21 (Phase A T1 completion)
-# Rule: Additions to this file require Cloak's approval
+ Managed by: Cloak (Claude)
+ Last updated: 2026-04-21 (Phase A T1 completion)
+ Rule: Additions to this file require Cloak's approval
 
 ---
 
@@ -176,11 +176,11 @@ Equation of motion (specific form) → hypotheses: τ-evolution undetermined
 ---
 
 
-# ZCLP_confirmed.md
-# Zero Constrained Layer Potential — 確定事項
-# 管理：クロ（Cloak）
-# 最終更新：2026-04-21（フェーズA T1完了反映）
-# ルール：このファイルへの追加はクロの承認が必要
+ ZCLP_confirmed.md
+ Zero Constrained Layer Potential — 確定事項
+ 管理：クロ（Cloak）
+ 最終更新：2026-04-21（フェーズA T1完了反映）
+ ルール：このファイルへの追加はクロの承認が必要
 
 ---
 
@@ -308,9 +308,11 @@ ZCLP本体が出さないもの：
 ZCLPは以下の条件が確認された場合、棄却または修正とする。
 
 ①  log-k空間の周期振動
-- SDSS/DESI で Δ(ln k) ≈ 4 の周期が検出されない → 棄却
+- SDSS/DESI で log-k空間の周期構造が検出されない → 棄却
 - 検出されてもΛCDMで同等説明可能 → 棄却
+- 検出された周期値がlnαと2σ以上ずれる → 棄却
 - 複数データセットで周期値が不一致 → 棄却
+- SDSS/DESI で Δ(ln k) ≈ 4 の周期が検出されない → 棄却
 
 ② スケール階層比
 - 実測スケール比が α（≈55）から 2σ 以上ずれる → 棄却
